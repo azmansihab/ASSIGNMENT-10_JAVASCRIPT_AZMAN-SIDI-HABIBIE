@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10 - Ruang Nalar Urban</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-pattern">
+
+    <div class="nav-wrapper d-flex justify-content-center sticky-top">
+        <nav class="navbar navbar-expand-lg glass-pill mt-3">
+            <div class="container-fluid justify-content-center">
+                <div class="navbar-nav flex-row">
+                    <a class="nav-link active px-4" href="index.html">Home</a>
+                    <a class="nav-link px-4" href="#">Data Manager</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container my-5 py-5">
+
+        <header class="text-center mb-5 p-5 bg-brand-teal rounded-4 shadow-lg text-white">
+            <h1 class="display-5 fw-bold solid-brand-blue"><i class="fas fa-database me-2"></i> Ruang Data Manager</h1>
+            <p class="lead mt-3 opacity-90">Sistem CRUD untuk Manajemen Data Dummy Proyek WebGIS</p>
+        </header>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-5">
+                <div class="card bg-brand-navy p-4 border-0 shadow-lg rounded-4 h-100">
+                    <h2 id="formTitle" class="fw-bold mb-4 text-white">
+                        <i class="fas fa-plus-circle me-2"></i> Tambah Post
+                    </h2>
+                    <form id="postForm">
+                        <input type="hidden" id="postId">
+                        <div class="mb-3">
+                            <label class="form-label text-white fw-semibold">Kategori Variabel</label>
+                            <input type="text" id="title" class="form-control form-control-lg form-dark"
+                                placeholder="Contoh: Analisis Kebisingan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white fw-semibold">Deskripsi Terkait Variabel</label>
+                            <textarea id="body" class="form-control form-control-lg form-dark" rows="4"
+                                placeholder="Detail analisis spasial..." required></textarea>
+                        </div>
+                        <div class="d-flex gap-2 pt-3">
+                            <button type="submit" id="submitBtn" class="btn btn-orange w-100 btn-lg fw-bold">Simpan
+                                Data</button>
+                            <button type="button" id="cancelBtn"
+                                class="btn btn-outline-light w-100 btn-lg fw-bold d-none">Batal Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card bg-brand-orange text-white p-4 border-0 shadow-lg rounded-4 h-100">
+                    <h3 class="fw-bold mb-4">
+                        <i class="fas fa-list-ul me-2"></i> Daftar Data Dummy
+                    </h3>
+
+                    <div id="postList" class="row g-3">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="glass-footer text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2026 | MAPID Academy WebGIS Development </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
